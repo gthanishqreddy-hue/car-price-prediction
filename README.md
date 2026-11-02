@@ -8,6 +8,7 @@ pipeline, honest model selection, a validated inference API and a Streamlit app.
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.9-orange)
 ![tests](https://img.shields.io/badge/tests-56%20passing-brightgreen)
 ![license](https://img.shields.io/badge/license-MIT-lightgrey)
+[![CI](https://github.com/gthanishqreddy-hue/car-price-prediction/actions/workflows/ci.yml/badge.svg)](https://github.com/gthanishqreddy-hue/car-price-prediction/actions/workflows/ci.yml)
 
 **Headline result:** a Random Forest trained on the *share of the new-car price retained*
 reaches **R² = 0.954** and **MAE ≈ ₹68,700** on a held-out test set of 40 cars
@@ -145,7 +146,7 @@ Design decisions worth calling out:
 ## 6. Installation
 
 ```bash
-git clone https://github.com/<your-username>/car-price-prediction.git
+git clone https://github.com/gthanishqreddy-hue/car-price-prediction.git
 cd car-price-prediction
 python -m venv .venv
 ```
