@@ -1,0 +1,51 @@
+{
+  "selected_model": "Random Forest",
+  "selection_criterion": "lowest mean RMSE over 5x3 repeated K-fold CV on the training set",
+  "target_mode": "ratio",
+  "best_params": {
+    "n_estimators": 500,
+    "min_samples_leaf": 1,
+    "max_features": 1.0,
+    "max_depth": 10
+  },
+  "cv": {
+    "RMSE": {
+      "mean": 1.048642522088708,
+      "std": 0.20525343907556465
+    },
+    "MAE": {
+      "mean": 0.7545800755844447,
+      "std": 0.12124268372031093
+    },
+    "MSE": {
+      "mean": 1.141780113384913,
+      "std": 0.43469040469394504
+    },
+    "R2": {
+      "mean": 0.9500708316312692,
+      "std": 0.02678586417070071
+    }
+  },
+  "train": {
+    "RMSE": 0.3775713397048323,
+    "MAE": 0.2707170545574342,
+    "MSE": 0.14256011656650186,
+    "R2": 0.9947188363822644
+  },
+  "test": {
+    "RMSE": 0.9210050157840352,
+    "MAE": 0.6872926678591927,
+    "MSE": 0.8482502390993508,
+    "R2": 0.9541849750877003
+  },
+  "units": "lakh INR (1 lakh = 100,000 INR); MSE in lakh^2",
+  "n_train": 158,
+  "n_test": 40,
+  "cleaning": {
+    "rows_in": 301,
+    "duplicates_removed": 2,
+    "two_wheelers_removed": 101,
+    "rows_out": 198,
+    "notes": []
+  }
+}

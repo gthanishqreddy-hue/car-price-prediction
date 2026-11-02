@@ -1,0 +1,9 @@
+# Runtime dependencies (tested with Python 3.12 on Windows 11).
+# pandas 3.x / numpy 2.5 require Python >= 3.11.
+numpy==2.5.4
+pandas==3.1.0
+scikit-learn==1.9.1
+matplotlib==3.11.2
+seaborn==0.13.2
+joblib==1.6.0
+streamlit==1.66.1

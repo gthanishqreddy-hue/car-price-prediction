@@ -1,0 +1,154 @@
+{
+  "raw_shape": [
+    301,
+    9
+  ],
+  "raw_missing_values": {
+    "Car_Name": 0,
+    "Selling_Price": 0,
+    "Year": 0,
+    "Present_Price": 0,
+    "Kms_Driven": 0,
+    "Owner": 0,
+    "Fuel_Type": 0,
+    "Seller_Type": 0,
+    "Transmission": 0
+  },
+  "raw_duplicate_rows": 2,
+  "raw_dtypes": {
+    "Car_Name": "string",
+    "Selling_Price": "float64",
+    "Year": "int64",
+    "Present_Price": "float64",
+    "Kms_Driven": "int64",
+    "Owner": "int64",
+    "Fuel_Type": "string",
+    "Seller_Type": "string",
+    "Transmission": "string"
+  },
+  "cleaning": {
+    "rows_in": 301,
+    "duplicates_removed": 2,
+    "two_wheelers_removed": 101,
+    "rows_out": 198,
+    "notes": []
+  },
+  "clean_shape": [
+    198,
+    9
+  ],
+  "category_counts_clean": {
+    "Fuel_Type": {
+      "Petrol": 138,
+      "Diesel": 58,
+      "CNG": 2
+    },
+    "Seller_Type": {
+      "Dealer": 193,
+      "Individual": 5
+    },
+    "Transmission": {
+      "Manual": 168,
+      "Automatic": 30
+    },
+    "Owner": {
+      "0": 193,
+      "1": 4,
+      "3": 1
+    }
+  },
+  "numeric_summary_clean": {
+    "Selling_Price": {
+      "count": 198.0,
+      "mean": 6.604,
+      "std": 5.043,
+      "min": 0.35,
+      "25%": 3.612,
+      "50%": 5.25,
+      "75%": 7.5,
+      "max": 35.0
+    },
+    "Year": {
+      "count": 198.0,
+      "mean": 2013.571,
+      "std": 2.895,
+      "min": 2003.0,
+      "25%": 2012.0,
+      "50%": 2014.0,
+      "75%": 2015.75,
+      "max": 2018.0
+    },
+    "Present_Price": {
+      "count": 198.0,
+      "mean": 10.883,
+      "std": 8.814,
+      "min": 2.28,
+      "25%": 6.422,
+      "50%": 8.45,
+      "75%": 13.46,
+      "max": 92.6
+    },
+    "Kms_Driven": {
+      "count": 198.0,
+      "mean": 41403.919,
+      "std": 27554.214,
+      "min": 2071.0,
+      "25%": 21964.25,
+      "50%": 39742.5,
+      "75%": 53621.25,
+      "max": 197176.0
+    },
+    "Owner": {
+      "count": 198.0,
+      "mean": 0.035,
+      "std": 0.254,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 0.0,
+      "max": 3.0
+    }
+  },
+  "iqr_outliers_train": {
+    "Selling_Price": {
+      "lower_bound": -2.218750000000001,
+      "upper_bound": 13.33125,
+      "n_outliers": 13,
+      "max_value": 35.0
+    },
+    "Present_Price": {
+      "lower_bound": -3.4812499999999993,
+      "upper_bound": 23.84875,
+      "n_outliers": 9,
+      "max_value": 92.6
+    },
+    "Kms_Driven": {
+      "lower_bound": -26655.0,
+      "upper_bound": 101345.0,
+      "n_outliers": 3,
+      "max_value": 142000.0
+    },
+    "Car_Age": {
+      "lower_bound": -0.5,
+      "upper_bound": 11.5,
+      "n_outliers": 6,
+      "max_value": 16.0
+    }
+  },
+  "spearman_with_target_train": {
+    "Present_Price": 0.712,
+    "Kms_Driven": -0.281,
+    "Car_Age": -0.533,
+    "Kms_Per_Year": 0.168,
+    "Owner": -0.139
+  },
+  "figures": [
+    "price_distribution.png",
+    "age_vs_price.png",
+    "kms_vs_price.png",
+    "present_vs_selling_price.png",
+    "fuel_type_distribution.png",
+    "transmission_comparison.png",
+    "correlation_heatmap.png"
+  ]
+}

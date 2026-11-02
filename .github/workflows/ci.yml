@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+      - name: Lint
+        run: ruff check src app tests
+      - name: Unit tests (no data required)
+        run: pytest -q
+      - name: Download dataset (checksum-verified)
+        run: python -m src.download_data
+      - name: Train (fast mode) and run all tests including integration tests
+        run: |
+          python -m src.train --fast
+          pytest -q
+      - name: Smoke-test prediction CLI
+        run: >
+          python -m src.predict --year 2015 --present-price 9.5 --kms 40000
+          --fuel Petrol --seller Dealer --transmission Manual --owner 0

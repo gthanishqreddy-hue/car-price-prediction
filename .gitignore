@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Data: downloaded with `python -m src.download_data`, not redistributed
+data/raw/*
+!data/raw/.gitkeep
+*.part
+
+# Trained model binaries: reproducible with `python -m src.train`
+models/*
+!models/.gitkeep
+
+# Notebooks / editors / OS
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Streamlit local secrets
+.streamlit/secrets.toml
